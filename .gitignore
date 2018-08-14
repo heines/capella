@@ -1,0 +1,5 @@
+*.log
+wp-content/upgrade
+wp-content/uploads
+/license.txt
+/readme.html
