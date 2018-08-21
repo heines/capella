@@ -1,5 +1,6 @@
 *.log
 wp-content/upgrade
 wp-content/uploads
+wp-content/themes/techblog/node_modules
 /license.txt
 /readme.html
