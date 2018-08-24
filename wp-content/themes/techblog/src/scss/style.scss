@@ -1,0 +1,245 @@
+@charset "utf-8";
+@import "_config";
+
+/*
+Theme Name: techblog
+Author: heines
+Author URI: https://github.com/heines/capella
+Description: original theme
+Tags:
+Text Domain: techblog
+version： 1.0.0
+*/
+
+/*
+$highlight: #80C3DD;
+$primary-color: #CEE2EA;
+$base_color: #FEFEFE;
+$top_bgcolor:#F0F0F0;
+
+*/
+
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  top: 0;
+  left: 0;
+  background-color: $top_bgcolor;
+  font-family:"arial";
+  color: $base_txt_color;
+  font-size: 15px;
+  position: absolute;
+}
+
+.mainbody {
+  margin: 20px;
+}
+
+h1 {
+  padding:0.7em 1em;
+  position: relative;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+a {
+  margin: 5px;
+  text-decoration: none;
+  position: relative;
+}
+
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+h1:before,h1:after{
+  content:'';
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  display: inline-block;
+}
+
+h1:before{
+  border-left: solid 3px $primary-color;
+  border-top: solid 3px $primary-color;
+  top:0;
+  left: 0;
+}
+
+h1:after{
+  border-right: solid 3px $primary-color;
+  border-bottom: solid 3px $primary-color;
+  bottom:0;
+  right: 0;
+}
+
+
+
+.listbox {
+  margin: 10px 0 10px 10px;
+  padding: 10px 0 10px 10px;
+
+  li.now {
+    background-color: $base_color;
+    a {
+      color: $primary-color;
+    }
+  }
+
+  a {
+    margin: 5px;
+    text-decoration: none;
+    color: $highlight;
+    position: relative;
+    display: inline-block;
+    transition: .3s;
+    font-size: 20px;
+  }
+
+  a:hover {
+    color: $primary-color;
+  }
+
+  a::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 1px;
+    background-color: $primary-color;
+    transition: .3s;
+  }
+  a:hover::after {
+    width: 100%;
+  }
+}
+
+.mainbox {
+  display: flex;
+}
+
+.menubox {
+  width: $menu_width + 0px;
+}
+
+.symbol {
+  margin: 10px 10px 20px 10px;
+  padding: 5px;
+  border-bottom: 1px dashed $base_color;
+}
+
+.contentsbox {
+  padding: 20px;
+  background-color: $base_color;
+  width: ($full_width - $menu_width) + 0px;
+  border-radius: 10px;
+}
+
+.iconbox {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  vertical-align:middle;
+  font-size: 25px;
+  text-align: center;
+  a.shobo span.def_s{
+    display:inline;
+    color: $base_txt_color;
+  }
+  a.shobo:hover span.def_s{
+    display:none;
+  }
+  a.shobo span.hov_s{
+    display:none;
+  }
+  a.shobo:hover span.hov_s{
+    display:inline;
+    color: $base_txt_color;
+  }
+}
+
+.title {
+  text-align: center;
+  a {
+    color: $base_txt_color;
+  }
+}
+
+.blogtag_box {
+  p {
+      padding : 10px;
+      font-size: 18px;
+      border-top: 1px dashed $base_color;
+    }
+}
+
+.highlight_report{
+  padding: 2.5% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.highlight_report .new_report, .fixed_report{
+  width: 30%;
+  height: 250px;
+  background-color: $top_bgcolor;
+  text-align: center;
+  border: 1px solid $base_color;
+  border-radius: 10px;
+  position: relative;
+  a {
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    line-height: 150px;
+  }
+  .tags {
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 10px;
+    width: 30%;
+    background-color: $primary-color;
+    box-shadow:1px 1px 2px;
+    pointer-events: none;
+  }
+  .title {
+    text-align: left;
+    color: #FFF;
+    position: absolute;
+    bottom: 0;
+    right :0;
+    left : 0;
+    padding: 10px;
+    height: 40%;
+    border-radius: 0 0 10px 10px;
+    background-color: rgba(0,0,0, 0.4);
+    pointer-events: none;
+  }
+}
+
+.fixed_report, .new_report {
+  background-image: url(../images/test.jpg);
+  background-size:cover;
+  :hover {
+    background-color: rgba(255,255,255, 0.4);
+    border-radius: 10px;
+  }
+}
+
+@import "_blog";

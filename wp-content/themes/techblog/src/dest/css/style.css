@@ -1,0 +1,292 @@
+@charset "UTF-8";
+/*
+Theme Name: techblog
+Author: heines
+Author URI: https://github.com/heines/capella
+Description: original theme
+Tags:
+Text Domain: techblog
+version： 1.0.0
+*/
+/*
+$highlight: #80C3DD;
+$primary-color: #CEE2EA;
+$base_color: #FEFEFE;
+$top_bgcolor:#F0F0F0;
+
+*/
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  top: 0;
+  left: 0;
+  background-color: #FEFEFE;
+  font-family: "arial";
+  color: #36535E;
+  font-size: 15px;
+  position: absolute;
+}
+
+.mainbody {
+  margin: 20px;
+}
+
+h1 {
+  padding: 0.7em 1em;
+  position: relative;
+  line-height: 1.2;
+  display: inline-block;
+}
+
+a {
+  margin: 5px;
+  text-decoration: none;
+  position: relative;
+}
+
+li {
+  list-style: none;
+  padding-left: 0;
+}
+
+h1:before, h1:after {
+  content: '';
+  width: 20px;
+  height: 30px;
+  position: absolute;
+  display: inline-block;
+}
+
+h1:before {
+  border-left: solid 3px #77B8DA;
+  border-top: solid 3px #77B8DA;
+  top: 0;
+  left: 0;
+}
+
+h1:after {
+  border-right: solid 3px #77B8DA;
+  border-bottom: solid 3px #77B8DA;
+  bottom: 0;
+  right: 0;
+}
+
+.listbox {
+  margin: 10px 0 10px 10px;
+  padding: 10px 0 10px 10px;
+}
+
+.listbox li.now {
+  background-color: #F0F0F0;
+}
+
+.listbox li.now a {
+  color: #77B8DA;
+}
+
+.listbox a {
+  margin: 5px;
+  text-decoration: none;
+  color: #C7E1EF;
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+  font-size: 20px;
+}
+
+.listbox a:hover {
+  color: #77B8DA;
+}
+
+.listbox a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #77B8DA;
+  transition: .3s;
+}
+
+.listbox a:hover::after {
+  width: 100%;
+}
+
+.mainbox {
+  display: flex;
+}
+
+.menubox {
+  width: 300px;
+}
+
+.symbol {
+  margin: 10px 10px 20px 10px;
+  padding: 5px;
+  border-bottom: 1px dashed #F0F0F0;
+}
+
+.contentsbox {
+  padding: 20px;
+  background-color: #F0F0F0;
+  width: 1500px;
+  border-radius: 10px;
+}
+
+.iconbox {
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  vertical-align: middle;
+  font-size: 25px;
+  text-align: center;
+}
+
+.iconbox a.shobo span.def_s {
+  display: inline;
+  color: #36535E;
+}
+
+.iconbox a.shobo:hover span.def_s {
+  display: none;
+}
+
+.iconbox a.shobo span.hov_s {
+  display: none;
+}
+
+.iconbox a.shobo:hover span.hov_s {
+  display: inline;
+  color: #36535E;
+}
+
+.title {
+  text-align: center;
+}
+
+.title a {
+  color: #36535E;
+}
+
+.blogtag_box p {
+  padding: 10px;
+  font-size: 18px;
+  border-top: 1px dashed #F0F0F0;
+}
+
+.highlight_report {
+  padding: 2.5% 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.highlight_report .new_report, .fixed_report {
+  width: 30%;
+  height: 250px;
+  background-color: #FEFEFE;
+  text-align: center;
+  border: 1px solid #F0F0F0;
+  border-radius: 10px;
+  position: relative;
+}
+
+.highlight_report .new_report a, .fixed_report a {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 150px;
+}
+
+.highlight_report .new_report .tags, .fixed_report .tags {
+  margin-left: 0;
+  margin-top: 20px;
+  padding: 10px;
+  width: 30%;
+  background-color: #77B8DA;
+  box-shadow: 1px 1px 2px;
+  pointer-events: none;
+}
+
+.highlight_report .new_report .title, .fixed_report .title {
+  text-align: left;
+  color: #FFF;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px;
+  height: 40%;
+  border-radius: 0 0 10px 10px;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+}
+
+.fixed_report, .new_report {
+  background-image: url(../images/test.jpg);
+  background-size: cover;
+}
+
+.fixed_report :hover, .new_report :hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+
+.reportbox {
+  width: 1500px;
+}
+
+.reportbox .titleheader {
+  padding: 5px 20px 5px 20px;
+  border: 1px solid #F0F0F0;
+  border-radius: 10px 10px 0 0;
+}
+
+.reportbox .titleheader p {
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+
+.reportbox .titleheader a {
+  color: #DBB17F;
+}
+
+.reportbox .report {
+  padding: 20px;
+  background-color: #F0F0F0;
+  border-radius: 0 0 10px 10px;
+}
+
+.list_report {
+  font-size: 18px;
+}
+
+.list_report li {
+  height: 30px;
+  padding: 15px;
+  background-color: #FEFEFE;
+  border-bottom: 1px dashed #36535E;
+  width: 50%;
+}
+
+.list_report li a {
+  color: #36535E;
+}
+
+.list_report a:hover {
+  color: #77B8DA;
+}

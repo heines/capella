@@ -1,0 +1,56 @@
+extends _page
+
+block var_pagename
+  - var pagename = 'blog'
+
+block bloglink
+  div.blogtag_box
+    p tag list
+
+block contents          
+  div.contentsbox
+    div.highlight_report
+      div.new_report
+        div.tags last update
+        div.title
+          | 日付
+          br
+          | タイトル
+        a(href="test_report.html")
+      div.fixed_report
+        div.tags fixed
+        div.title
+          | 日付
+          br
+          | タイトル
+        a(href="test_report.html")
+    div.list_report 
+      ul.container
+      - for(var i = 6; i > 0; i--)
+        li.motion: a(href="test_report.html") 2018.08.0#{i}：テストタイトルです
+      a(href="#") more
+        
+          
+      //.
+        <ul>
+          <?php
+            $args = array(
+            'posts_per_page' => 5 // 表示件数の指定
+            );
+            $posts = get_posts( $args );
+            foreach ( $posts as $post ): // ループの開始
+            setup_postdata( $post ); // 記事データの取得
+          ?>
+          <li>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+          </li>
+          <?php
+            endforeach; // ループの終了
+            wp_reset_postdata(); // 直前のクエリを復元する
+          ?>
+        </ul>
+          
+        
+      
+    
+      

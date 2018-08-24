@@ -1,0 +1,38 @@
+include _var
+include _mixin
+// header 
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+    link(rel="stylesheet" href="css/style.css")
+    .
+      <?php wp_head(); ?>
+  body
+    canvas#canvas
+    div.mainbody
+      div.mainbox
+        div.menubox
+          div.symbol
+            div.iconbox
+              a.shobo(href="/")
+                span.def_s ´・ω・`
+                span.hov_s ´＞ω＜`
+            div.title: a(href="/") slumber
+          div.listbox
+            block var_pagename
+              - var pagename
+            +menulist(pagename)
+            block bloglink
+        block contents          
+          div.contentsbox
+          
+
+    // footer 
+    footer
+      div.tests
+    .
+      <?php wp_footer(); ?>
+
+
+      
+      

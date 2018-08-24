@@ -1,0 +1,40 @@
+@import "_config";
+
+.reportbox{
+  width: ($full_width - $menu_width) + 0px;
+  .titleheader {
+    padding: 5px 20px 5px 20px;
+    border: 1px solid $base_color;
+    border-radius: 10px 10px 0 0;
+    p {
+      text-align: right;
+      padding: 0;
+      margin: 0;
+    }
+    a {
+      color: $pickup_color;
+    }
+  }
+  .report {
+    padding: 20px;
+    background-color: $base_color;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.list_report {
+  font-size: 18px;
+  li {
+    height: 30px;
+    padding: 15px;
+    background-color: $top_bgcolor;
+    border-bottom: 1px dashed $base_txt_color;
+    width: 50%;
+    a {
+      color:$base_txt_color;
+    }
+  }
+  a:hover {
+    color:$primary-color;
+  }
+}
