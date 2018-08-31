@@ -16,15 +16,15 @@
           </div>
           <div class="listbox">
             <ul>
-              <li><a href="about">about</a></li>
+              <li class="now"><a href="about">about</a></li>
               <li><a href="blog">blog</a></li>
               <li><a href="p_portfolio.html">portfolio</a></li>
               <li><a href="p_contact.html">contact</a></li>
             </ul>
           </div>
         </div>
-        <div>
-          <p>（上にバーが入るからマージンが足りない……）</p>
+        <div class="contentsbox">
+          <p>about</p>
         </div>
       </div>
     </div>
