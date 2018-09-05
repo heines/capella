@@ -1,8 +1,6 @@
 <!-- header -->
 <html lang="ja">
   <head>
-    <meta charset="utf-8"/>
-    <link rel="stylesheet" href="/wp/wp-content/themes/techblog/style.css"/>
     <?php get_header(); ?>
   </head>
   <body>

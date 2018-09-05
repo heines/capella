@@ -1,17 +1,13 @@
 <!-- header -->
 <html lang="ja">
 <head>
-  <meta charset="utf-8"/>
-  <link rel="stylesheet" href="/wp/wp-content/themes/techblog/style.css"/>
   <?php get_header(); ?>
 </head>
   <body>
     <canvas id="canvas"></canvas>
     <div class="mainbody">
       <div class="mainbox">
-        <div class="menubox">
-          <?php get_sidebar(); ?>
-        </div>
+        <?php get_sidebar(); ?>
         <div class="contentsbox">
           <div class="highlight_report">
             <div class="new_report">
