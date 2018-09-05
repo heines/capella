@@ -1,9 +1,9 @@
+
 <!-- header -->
 <html lang="ja">
   <head>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" href="/wp/wp-content/themes/techblog/style.css"/>
-    <?php get_header(); ?>
+    <link rel="stylesheet" href="css/style.css"/><?php wp_head(); ?>
   </head>
   <body>
     <canvas id="canvas"></canvas>
@@ -16,21 +16,19 @@
           </div>
           <div class="listbox">
             <ul>
-              <li class="now"><a href="about">about</a></li>
-              <li><a href="blog">blog</a></li>
+              <li><a href="p_about.html">about</a></li>
+              <li><a href="p_blog.html">blog</a></li>
               <li><a href="p_portfolio.html">portfolio</a></li>
-              <li><a href="p_contact.html">contact</a></li>
+              <li class="now"><a href="p_contact.html">contact</a></li>
             </ul>
           </div>
         </div>
-        <div class="contentsbox">
-          <p>about</p>
-        </div>
+        <div class="contentsbox"></div>
       </div>
     </div>
     <!-- footer -->
     <footer>
       <div class="tests"></div>
-    </footer><?php get_footer(); ?>
+    </footer><?php wp_footer(); ?>
   </body>
 </html>

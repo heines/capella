@@ -1,0 +1,77 @@
+
+<!-- header -->
+<html lang="ja">
+  <head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="css/style.css"/><?php wp_head(); ?>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <div class="mainbody">
+      <div class="mainbox">
+        <div class="menubox">
+          <div class="symbol">
+            <div class="iconbox"><a class="shobo" href="/"><span class="def_s">´・ω・`</span><span class="hov_s">´＞ω＜`</span></a></div>
+            <div class="title"><a href="/">slumber</a></div>
+          </div>
+          <div class="listbox">
+            <ul>
+              <li><a href="p_about.html">about</a></li>
+              <li class="now"><a href="p_blog.html">blog</a></li>
+              <li><a href="p_portfolio.html">portfolio</a></li>
+              <li><a href="p_contact.html">contact</a></li>
+            </ul>
+            <div class="blogtag_box">
+              <p>tag list</p>
+            </div>
+          </div>
+        </div>
+        <div class="contentsbox">
+          <div class="highlight_report">
+            <div class="new_report">
+              <div class="tags">last update</div>
+              <div class="title">日付<br/>タイトル</div><a href="test_report.html"></a>
+            </div>
+            <div class="fixed_report">
+              <div class="tags">fixed</div>
+              <div class="title">日付<br/>タイトル</div><a href="test_report.html"></a>
+            </div>
+          </div>
+          <div class="list_report"> 
+            <ul class="container"></ul>
+            <li class="motion"><a href="test_report.html">2018.08.06：テストタイトルです</a></li>
+            <li class="motion"><a href="test_report.html">2018.08.05：テストタイトルです</a></li>
+            <li class="motion"><a href="test_report.html">2018.08.04：テストタイトルです</a></li>
+            <li class="motion"><a href="test_report.html">2018.08.03：テストタイトルです</a></li>
+            <li class="motion"><a href="test_report.html">2018.08.02：テストタイトルです</a></li>
+            <li class="motion"><a href="test_report.html">2018.08.01：テストタイトルです</a></li><a href="#">more</a>
+            <!--.
+            <ul>
+              <?php
+                $args = array(
+                'posts_per_page' => 5 // 表示件数の指定
+                );
+                $posts = get_posts( $args );
+                foreach ( $posts as $post ): // ループの開始
+                setup_postdata( $post ); // 記事データの取得
+              ?>
+              <li>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+              </li>
+              <?php
+                endforeach; // ループの終了
+                wp_reset_postdata(); // 直前のクエリを復元する
+              ?>
+            </ul>
+              
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <div class="tests"></div>
+    </footer><?php wp_footer(); ?>
+  </body>
+</html>

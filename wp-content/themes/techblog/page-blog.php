@@ -10,31 +10,7 @@
     <div class="mainbody">
       <div class="mainbox">
         <div class="menubox">
-          <div class="symbol">
-            <div class="iconbox"><a class="shobo" href="/"><span class="def_s">´・ω・`</span><span class="hov_s">´＞ω＜`</span></a></div>
-            <div class="title"><a href="/">slumber</a></div>
-          </div>
-          <div class="listbox">
-            <ul>
-              <li><a href="about">about</a></li>
-              <li class="now"><a href="blog">blog</a></li>
-              <li><a href="p_portfolio.html">portfolio</a></li>
-              <li><a href="p_contact.html">contact</a></li>
-            </ul>
-            <div class="blogtag_box">
-              <p>tag list</p>
-              <ul>
-                <?php
-                $posttags = get_tags();
-                if ($posttags) {
-                foreach($posttags as $tag) {
-                echo '<li><a href="'. get_tag_link($tag->term_id) .'">' . $tag->name . '</a> ('. $tag->count .')</li>';
-                }
-                }
-                ?>
-              </ul>
-            </div>
-          </div>
+          <?php get_sidebar(); ?>
         </div>
         <div class="contentsbox">
           <div class="highlight_report">
