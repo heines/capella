@@ -11,7 +11,8 @@
       <div class="mainbox">
         <?php get_sidebar(); ?>
         <div>
-          <p>眠いんだよな</p>
+          <!-- TODO -->
+          <p></p>
         </div>
       </div>
       <!-- footer -->
