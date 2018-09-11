@@ -1,6 +1,11 @@
+/*
+ * 参考：https://sterfield.co.jp/designer/canvasで波のアニメーションを描画する/
+ * 上記を一部変更した
+ */
+
 (function () {
   var unit = 100,
-      canvas, context, canvas2, context2,
+      canvas, context,
       height, width, xAxis, yAxis,
       draw;
 
@@ -11,8 +16,8 @@
       context = canvas.getContext("2d");
       height = canvas.height;
       width = canvas.width;
-      xAxis = Math.floor(height-400);
-      yAxis = 0;
+      yAxis = Math.floor(height-400);
+      xAxis = 0;
       draw();
   }
 
@@ -20,10 +25,8 @@
       // キャンバスの描画をクリア
       context.clearRect(0, 0, width, height);
       //波を描画
-      drawWave('#DDDDDD', '#cce7ff', 0.25, 8,0);
-      //drawWave('#FFFFFF', '#CCCCCC', 0.5, 8, 0);
+      drawWave('#DDDDDD', '#cce7ff', 0.25, 10, 0.1);
 
-      // Update the time and draw again
       draw.seconds = draw.seconds + .005;
       draw.t = draw.seconds*Math.PI;
       setTimeout(draw, 35);
@@ -54,15 +57,15 @@
   }
 
   function drawSine(t, zoom, delay) {
-      var x = t; //時間を横の位置とする
+      var x = t;
       var y = Math.sin(x)/zoom;
-      context.moveTo(yAxis, unit*y+xAxis); //スタート位置にパスを置く
-      for (i = yAxis; i <= width + 10; i += 10) {
-          x = t+(-yAxis+i)/unit/zoom;
-          y = Math.sin(x - delay)/3;
-          context.lineTo(i, unit*y+xAxis);
+      context.moveTo(xAxis, unit*y+yAxis);
+      for (i = xAxis; i <= width + 10; i += 10) {
+          x = t+(-xAxis+i)/unit/zoom;
+          y = Math.sin(x - delay)/6;
+          context.lineTo(i, unit*y+yAxis);
       }
-      return unit*y+xAxis;
+      return unit*y+yAxis;
   }
 
   init();
