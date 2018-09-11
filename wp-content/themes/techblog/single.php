@@ -19,7 +19,14 @@
               <h1><?php the_title(); ?></h1>
 
               <p class="timestump"><time datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('Y.m.d'); ?></time></p>
-              <p><a href="#">タグ</a></p>
+              <p>category：
+                <?php
+                  the_category(', ');
+                  if ( get_the_tag_list() ) {
+                      echo get_the_tag_list( ' / tag：', ', ', '' );
+                  }
+                ?>
+              </p>
             </div>
             <div class="report">
               <?php the_content('Read more'); ?>

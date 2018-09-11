@@ -4,18 +4,20 @@
     <?php get_header(); ?>
   </head>
   <body>
-    <canvas id="canvas"></canvas>
-    <div class="mainbody">
+    <canvas id="sineCanvas">
+      <script type="text/javascript" src="/wp/wp-content/themes/techblog/bgwave.js"></script>
+    </canvas>
+    <div id="mainbody">
       <div class="mainbox">
         <?php get_sidebar(); ?>
         <div>
-          <p>要マージン確保</p>
+          <p>眠いんだよな</p>
         </div>
       </div>
+      <!-- footer -->
+      <footer>
+        <?php get_footer(); ?>
+      </footer>
     </div>
-    <!-- footer -->
-    <footer>
-      <?php get_footer(); ?>
-    </footer>
   </body>
 </html>

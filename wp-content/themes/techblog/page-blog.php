@@ -9,6 +9,7 @@
       <div class="mainbox">
         <?php get_sidebar(); ?>
         <div class="contentsbox">
+          <h2>blog</h2>
           <div class="highlight_report">
             <div class="new_report">
               <div class="tags">last update</div>
@@ -28,6 +29,7 @@
             </div>
           </div>
           <div class="list_report">
+            記事一覧
             <ul class="container">
             <?php
               $number_recents_posts = 5;  // 必要な件数を指定します

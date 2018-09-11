@@ -273,7 +273,6 @@ h1:after {
   height: 30px;
   padding: 15px;
   background-color: #FEFEFE;
-  border-bottom: 1px dashed #36535E;
   width: 50%;
 }
 
@@ -283,4 +282,8 @@ h1:after {
 
 .list_report a:hover {
   color: #77B8DA;
+}
+
+.neighbors a {
+  font-size: 20px;
 }

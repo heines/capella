@@ -18,4 +18,7 @@ Template Name: サイドバー
       <!-- javascript -->
     </ul>
   </div>
+  <div class="">
+    <?php wp_tag_cloud( 'smallest=15&largest=40&number=50&orderby=count' ); ?>
+  </div>
 </div>
