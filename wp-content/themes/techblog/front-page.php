@@ -4,7 +4,7 @@
     <?php get_header(); ?>
   </head>
   <body>
-    <canvas id="sineCanvas">
+    <canvas id="canvas">
       <script type="text/javascript" src="/wp/wp-content/themes/techblog/bgwave.js"></script>
     </canvas>
     <div id="mainbody">

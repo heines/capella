@@ -5,7 +5,7 @@
       draw;
 
   function init() {
-      canvas = document.getElementById("sineCanvas");
+      canvas = document.getElementById("canvas");
       canvas.width = document.documentElement.clientWidth; //Canvasのwidthをウィンドウの幅に合わせる
       canvas.height = document.documentElement.clientHeight;
       context = canvas.getContext("2d");
