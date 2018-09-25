@@ -280,3 +280,14 @@ h1:after {
 .list_report a:hover {
   color: #77B8DA;
 }
+
+.tagcloud {
+  margin: 10px;
+}
+.tagcloud a {
+  color: #36535E;
+}
+
+.tagcloud a:hover {
+  color: #77B8DA;
+}
